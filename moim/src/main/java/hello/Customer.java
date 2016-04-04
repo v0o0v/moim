@@ -22,6 +22,8 @@ public class Customer {
 	private String firstName;
 
 	private String lastName;
+	
+	private String desc;
 
 	public Customer(String firstName, String lastName) {
 		super();
