@@ -2,7 +2,6 @@ package hello;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -45,8 +44,7 @@ public class Application {
 			// fetch customers by last name
 			log.info("Customer found with findByLastNameStartsWithIgnoreCase('Bauer'):");
 			log.info("--------------------------------------------");
-			for (Customer bauer : repository
-					.findByLastNameStartsWithIgnoreCase("Bauer")) {
+			for (Customer bauer : repository.findByLastNameStartsWithIgnoreCase("Bauer")) {
 				log.info(bauer.toString());
 			}
 			log.info("");
