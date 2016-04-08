@@ -1,4 +1,4 @@
-package hello;
+package ui;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -12,6 +12,9 @@ import com.vaadin.ui.CssLayout;
 import com.vaadin.ui.TextField;
 import com.vaadin.ui.VerticalLayout;
 import com.vaadin.ui.themes.ValoTheme;
+
+import domain.Customer;
+import repository.CustomerRepository;
 
 /**
  * A simple example to introduce building forms. As your real application is
