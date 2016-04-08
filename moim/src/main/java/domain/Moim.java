@@ -20,4 +20,5 @@ public class Moim {
 	
 	String name;
 	Date birthday;
+	
 }
