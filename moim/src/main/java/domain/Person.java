@@ -13,7 +13,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 
 @Entity
-public class Customer {
+public class Person {
 
 	@Id
 	@GeneratedValue
@@ -25,7 +25,7 @@ public class Customer {
 	
 	private String desc;
 
-	public Customer(String firstName, String lastName) {
+	public Person(String firstName, String lastName) {
 		super();
 		this.firstName = firstName;
 		this.lastName = lastName;

@@ -5,7 +5,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import domain.Customer;
+import domain.Person;
 import repository.CustomerRepository;
 
 @RestController
@@ -15,7 +15,7 @@ public class CustomerController {
 	CustomerRepository customerRepository;
 
 	@RequestMapping("/customers/{id}")
-	public Customer getCustomer(@PathVariable long id) {
+	public Person getCustomer(@PathVariable long id) {
 		return this.customerRepository.findOne(id);
 	}
 }
