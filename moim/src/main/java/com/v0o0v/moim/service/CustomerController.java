@@ -1,12 +1,12 @@
-package service;
+package com.v0o0v.moim.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import domain.Member;
-import repository.MemberRepository;
+import com.v0o0v.moim.domain.Member;
+import com.v0o0v.moim.repository.MemberRepository;
 
 @RestController
 public class CustomerController {

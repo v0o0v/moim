@@ -1,4 +1,4 @@
-package domain;
+package com.v0o0v.moim.domain;
 
 import java.util.Date;
 

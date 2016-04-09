@@ -1,9 +1,9 @@
-package repository;
+package com.v0o0v.moim.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import domain.Member_Moim;
-import domain.Moim;
+import com.v0o0v.moim.domain.Member_Moim;
+import com.v0o0v.moim.domain.Moim;
 
 public interface Member_MoimRepository extends JpaRepository<Member_Moim, Long> {
 	

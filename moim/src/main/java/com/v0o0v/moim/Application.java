@@ -1,4 +1,5 @@
-package config;
+package com.v0o0v.moim;
+
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -7,8 +8,8 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-import domain.Member;
-import repository.MemberRepository;
+import com.v0o0v.moim.domain.Member;
+import com.v0o0v.moim.repository.MemberRepository;
 
 @SpringBootApplication
 public class Application implements CommandLineRunner {

@@ -1,8 +1,10 @@
-package ui;
+package com.v0o0v.moim.ui;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.util.StringUtils;
 
+import com.v0o0v.moim.domain.Member;
+import com.v0o0v.moim.repository.MemberRepository;
 import com.vaadin.annotations.Theme;
 import com.vaadin.data.util.BeanItemContainer;
 import com.vaadin.server.FontAwesome;
@@ -14,9 +16,6 @@ import com.vaadin.ui.HorizontalLayout;
 import com.vaadin.ui.TextField;
 import com.vaadin.ui.UI;
 import com.vaadin.ui.VerticalLayout;
-
-import domain.Member;
-import repository.MemberRepository;
 
 @SpringUI
 @Theme("valo")

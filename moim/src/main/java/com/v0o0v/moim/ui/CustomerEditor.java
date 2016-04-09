@@ -1,7 +1,9 @@
-package ui;
+package com.v0o0v.moim.ui;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
+import com.v0o0v.moim.domain.Member;
+import com.v0o0v.moim.repository.MemberRepository;
 import com.vaadin.data.fieldgroup.BeanFieldGroup;
 import com.vaadin.event.ShortcutAction;
 import com.vaadin.server.FontAwesome;
@@ -12,9 +14,6 @@ import com.vaadin.ui.CssLayout;
 import com.vaadin.ui.TextField;
 import com.vaadin.ui.VerticalLayout;
 import com.vaadin.ui.themes.ValoTheme;
-
-import domain.Member;
-import repository.MemberRepository;
 
 /**
  * A simple example to introduce building forms. As your real application is
