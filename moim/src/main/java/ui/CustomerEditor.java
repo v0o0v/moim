@@ -13,7 +13,7 @@ import com.vaadin.ui.TextField;
 import com.vaadin.ui.VerticalLayout;
 import com.vaadin.ui.themes.ValoTheme;
 
-import domain.Person;
+import domain.Member;
 import repository.CustomerRepository;
 
 /**
@@ -34,7 +34,7 @@ public class CustomerEditor extends VerticalLayout {
 	/**
 	 * The currently edited customer
 	 */
-	private Person customer;
+	private Member customer;
 
 	/* Fields to edit properties in Customer entity */
 	TextField firstName = new TextField("First name");
@@ -70,7 +70,7 @@ public class CustomerEditor extends VerticalLayout {
 		void onChange();
 	}
 
-	public final void editCustomer(Person c) {
+	public final void editCustomer(Member c) {
 		final boolean persisted = c.getId() != null;
 		if (persisted) {
 			// Find fresh entity for editing

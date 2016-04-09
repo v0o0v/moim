@@ -3,9 +3,9 @@ package repository;
 import java.util.List;
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import domain.Person;
+import domain.Member;
 
-public interface CustomerRepository extends JpaRepository<Person, Long> {
+public interface CustomerRepository extends JpaRepository<Member, Long> {
 
-	List<Person> findByLastNameStartsWithIgnoreCase(String lastName);
+	List<Member> findByLastNameStartsWithIgnoreCase(String lastName);
 }

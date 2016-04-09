@@ -15,7 +15,7 @@ import com.vaadin.ui.TextField;
 import com.vaadin.ui.UI;
 import com.vaadin.ui.VerticalLayout;
 
-import domain.Person;
+import domain.Member;
 import repository.CustomerRepository;
 
 @SpringUI
@@ -69,12 +69,12 @@ public class VaadinUI extends UI {
 				editor.setVisible(false);
 			}
 			else {
-				editor.editCustomer((Person) grid.getSelectedRow());
+				editor.editCustomer((Member) grid.getSelectedRow());
 			}
 		});
 
 		// Instantiate and edit new Customer the new button is clicked
-		addNewBtn.addClickListener(e -> editor.editCustomer(new Person("", "")));
+		addNewBtn.addClickListener(e -> editor.editCustomer(new Member("", "")));
 
 		// Listen changes made by the editor, refresh data from backend
 		editor.setChangeHandler(() -> {
@@ -90,10 +90,10 @@ public class VaadinUI extends UI {
 	private void listCustomers(String text) {
 		if (StringUtils.isEmpty(text)) {
 			grid.setContainerDataSource(
-					new BeanItemContainer(Person.class, repo.findAll()));
+					new BeanItemContainer(Member.class, repo.findAll()));
 		}
 		else {
-			grid.setContainerDataSource(new BeanItemContainer(Person.class,
+			grid.setContainerDataSource(new BeanItemContainer(Member.class,
 					repo.findByLastNameStartsWithIgnoreCase(text)));
 		}
 	}
