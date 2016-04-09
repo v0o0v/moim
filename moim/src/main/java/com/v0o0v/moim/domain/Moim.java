@@ -13,24 +13,29 @@ import javax.persistence.OneToMany;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import lombok.NonNull;
+import lombok.RequiredArgsConstructor;
 
 @Entity
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
+@RequiredArgsConstructor
 
 public class Moim {
-	
-	@Id	
+
+	@Id
 	@GeneratedValue
 	@Column(name = "Moim_ID")
 	private Long id;
-	
+
+	@NonNull
 	private String name;
-	
+
+	@NonNull
 	private Date birthday;
-	
-	@OneToMany(mappedBy="moim")
+
+	@OneToMany(mappedBy = "moim")
 	private List<Member_Moim> member_moim;
-	
+
 }

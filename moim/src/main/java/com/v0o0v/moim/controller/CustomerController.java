@@ -14,8 +14,8 @@ public class CustomerController {
 	@Autowired
 	MemberRepository customerRepository;
 
-	@RequestMapping("/customers/{id}")
-	public Member getCustomer(@PathVariable long id) {
-		return this.customerRepository.findOne(id);
-	}
+//	@RequestMapping("/customers/{id}")
+//	public Member getCustomer(@PathVariable long id) {
+//		return this.customerRepository.findOne(id);
+//	}
 }
