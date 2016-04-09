@@ -28,6 +28,8 @@ import com.vaadin.ui.themes.ValoTheme;
 @UIScope
 public class CustomerEditor extends VerticalLayout {
 
+	private static final long serialVersionUID = -6064457465803109849L;
+
 	private final MemberRepository repository;
 
 	/**
