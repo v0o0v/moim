@@ -31,6 +31,6 @@ public class Moim {
 	private Date birthday;
 	
 	@OneToMany(mappedBy="moim")
-	private List<Member_Moim> member_moim = new ArrayList<>();
+	private List<Member_Moim> member_moim;
 	
 }

@@ -32,7 +32,7 @@ public class Member {
 	private String desc;
 
 	@OneToMany(mappedBy = "member", cascade=CascadeType.ALL, fetch=FetchType.EAGER)			
-	private List<Member_Moim> member_moim = new ArrayList<>();
+	private List<Member_Moim> member_moim;
 
 	public Member(String name, String desc) {
 		super();
