@@ -27,7 +27,7 @@ public class Application implements CommandLineRunner {
 		// save a couple of customers
 
 		for (int i = 1; i < 5; i++) {
-			repository.save(new Member("Member"+i, "Description_"+i));
+			repository.save(new Member("Member" + i, "Description_" + i));
 		}
 
 	}
