@@ -8,7 +8,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 
 import domain.Member;
-import repository.CustomerRepository;
+import repository.MemberRepository;
 
 @SpringBootApplication
 public class Application {
@@ -20,14 +20,14 @@ public class Application {
 	}
 
 	@Bean
-	public CommandLineRunner loadData(CustomerRepository repository) {
+	public CommandLineRunner loadData(MemberRepository repository) {
 		return (args) -> {
 			// save a couple of customers
-			repository.save(new Member("Jack", "Bauer"));
-			repository.save(new Member("Chloe", "O'Brian"));
-			repository.save(new Member("Kim", "Bauer"));
-			repository.save(new Member("David", "Palmer"));
-			repository.save(new Member("Michelle", "Dessler"));
+			repository.save(new Member("홍길동", "홍길동입니다"));
+			repository.save(new Member("AAA", ""));
+			repository.save(new Member("zdfdsf adfsdf", "sdfsf"));
+			repository.save(new Member("1", "Palmer"));
+			repository.save(new Member("2", "Dessler"));
 
 			// fetch all customers
 			log.info("Customers found with findAll():");
@@ -45,9 +45,9 @@ public class Application {
 			log.info("");
 
 			// fetch customers by last name
-			log.info("Customer found with findByLastNameStartsWithIgnoreCase('Bauer'):");
+			log.info("Customer found with findByLastNameStartsWithIgnoreCase('홍길동'):");
 			log.info("--------------------------------------------");
-			for (Member bauer : repository.findByLastNameStartsWithIgnoreCase("Bauer")) {
+			for (Member bauer : repository.findByNameStartsWithIgnoreCase("홍길동")) {
 				log.info(bauer.toString());
 			}
 			log.info("");

@@ -6,13 +6,13 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import domain.Member;
-import repository.CustomerRepository;
+import repository.MemberRepository;
 
 @RestController
 public class CustomerController {
 
 	@Autowired
-	CustomerRepository customerRepository;
+	MemberRepository customerRepository;
 
 	@RequestMapping("/customers/{id}")
 	public Member getCustomer(@PathVariable long id) {

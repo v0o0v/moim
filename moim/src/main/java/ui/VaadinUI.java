@@ -16,13 +16,15 @@ import com.vaadin.ui.UI;
 import com.vaadin.ui.VerticalLayout;
 
 import domain.Member;
-import repository.CustomerRepository;
+import repository.MemberRepository;
 
 @SpringUI
 @Theme("valo")
 public class VaadinUI extends UI {
 
-	private final CustomerRepository repo;
+	private static final long serialVersionUID = 3229975127635858255L;
+
+	private final MemberRepository repo;
 
 	private final CustomerEditor editor;
 
@@ -33,7 +35,7 @@ public class VaadinUI extends UI {
 	private final Button addNewBtn;
 
 	@Autowired
-	public VaadinUI(CustomerRepository repo, CustomerEditor editor) {
+	public VaadinUI(MemberRepository repo, CustomerEditor editor) {
 		this.repo = repo;
 		this.editor = editor;
 		this.grid = new Grid();
@@ -67,8 +69,7 @@ public class VaadinUI extends UI {
 		grid.addSelectionListener(e -> {
 			if (e.getSelected().isEmpty()) {
 				editor.setVisible(false);
-			}
-			else {
+			} else {
 				editor.editCustomer((Member) grid.getSelectedRow());
 			}
 		});
@@ -89,12 +90,9 @@ public class VaadinUI extends UI {
 	// tag::listCustomers[]
 	private void listCustomers(String text) {
 		if (StringUtils.isEmpty(text)) {
-			grid.setContainerDataSource(
-					new BeanItemContainer(Member.class, repo.findAll()));
-		}
-		else {
-			grid.setContainerDataSource(new BeanItemContainer(Member.class,
-					repo.findByLastNameStartsWithIgnoreCase(text)));
+			grid.setContainerDataSource(new BeanItemContainer(Member.class, repo.findAll()));
+		} else {
+			grid.setContainerDataSource(new BeanItemContainer(Member.class, repo.findByNameStartsWithIgnoreCase(text)));
 		}
 	}
 	// end::listCustomers[]

@@ -1,34 +1,37 @@
 package domain;
 
+import java.util.List;
+
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import lombok.NonNull;
+import lombok.RequiredArgsConstructor;
 
 @Data
+@RequiredArgsConstructor
 @AllArgsConstructor
 @NoArgsConstructor
 
 @Entity
 public class Member {
 
-	@Id
+	@Id	
 	@GeneratedValue
+	@Column(name = "Member_ID")
 	private Long id;
 
-	private String firstName;
-
-	private String lastName;
+	@NonNull private String name;
 	
-	private String desc;
-
-	public Member(String firstName, String lastName) {
-		super();
-		this.firstName = firstName;
-		this.lastName = lastName;
-	}
+	@NonNull private String desc;
 	
+	@OneToMany(mappedBy="member")
+	private List<Member_Moim> member_moim;
+
 }

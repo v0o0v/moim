@@ -14,7 +14,7 @@ import com.vaadin.ui.VerticalLayout;
 import com.vaadin.ui.themes.ValoTheme;
 
 import domain.Member;
-import repository.CustomerRepository;
+import repository.MemberRepository;
 
 /**
  * A simple example to introduce building forms. As your real application is
@@ -29,7 +29,7 @@ import repository.CustomerRepository;
 @UIScope
 public class CustomerEditor extends VerticalLayout {
 
-	private final CustomerRepository repository;
+	private final MemberRepository repository;
 
 	/**
 	 * The currently edited customer
@@ -47,7 +47,7 @@ public class CustomerEditor extends VerticalLayout {
 	CssLayout actions = new CssLayout(save, cancel, delete);
 
 	@Autowired
-	public CustomerEditor(CustomerRepository repository) {
+	public CustomerEditor(MemberRepository repository) {
 		this.repository = repository;
 
 		addComponents(firstName, lastName, actions);
