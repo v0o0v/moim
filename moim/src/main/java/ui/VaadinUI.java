@@ -92,7 +92,7 @@ public class VaadinUI extends UI {
 		if (StringUtils.isEmpty(text)) {
 			grid.setContainerDataSource(new BeanItemContainer(Member.class, repo.findAll()));
 		} else {
-			grid.setContainerDataSource(new BeanItemContainer(Member.class, repo.findAll()));
+			grid.setContainerDataSource(new BeanItemContainer(Member.class, repo.findByNameStartsWithIgnoreCase(text)));
 		}
 	}
 	// end::listCustomers[]
