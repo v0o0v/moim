@@ -1,5 +1,6 @@
 package com.v0o0v.moim.domain;
 
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -30,6 +31,6 @@ public class Moim {
 	private Date birthday;
 	
 	@OneToMany(mappedBy="moim")
-	private List<Member_Moim> member_moim;
+	private List<Member_Moim> member_moim = new ArrayList<>();
 	
 }

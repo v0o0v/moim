@@ -1,9 +1,12 @@
 package com.v0o0v.moim.domain;
 
+import java.util.ArrayList;
 import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
@@ -28,8 +31,8 @@ public class Member {
 
 	private String desc;
 
-	@OneToMany(mappedBy = "member")
-	private List<Member_Moim> member_moim;
+	@OneToMany(mappedBy = "member", cascade=CascadeType.ALL, fetch=FetchType.EAGER)			
+	private List<Member_Moim> member_moim = new ArrayList<>();
 
 	public Member(String name, String desc) {
 		super();

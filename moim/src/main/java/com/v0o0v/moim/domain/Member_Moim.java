@@ -1,9 +1,8 @@
 package com.v0o0v.moim.domain;
 
-import java.util.Date;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
@@ -32,7 +31,4 @@ public class Member_Moim {
 	@ManyToOne
 	@JoinColumn(name = "Moim_ID")
 	private Moim moim;
-
-	private Date joinDate;
-
 }
