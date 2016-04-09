@@ -8,5 +8,6 @@ import domain.Member;
 
 public interface MemberRepository extends JpaRepository<Member, Long> {
 
-	List<Member> findByNameStartsWithIgnoreCase(String name);
+//	List<Member> findByNameStartsWithIgnoreCase(String name);
+//	List<Member> findByName(String name);
 }

@@ -10,28 +10,28 @@ import javax.persistence.OneToMany;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
-import lombok.NoArgsConstructor;
-import lombok.NonNull;
-import lombok.RequiredArgsConstructor;
 
 @Data
-@RequiredArgsConstructor
 @AllArgsConstructor
-@NoArgsConstructor
 
 @Entity
 public class Member {
 
-	@Id	
+	@Id
 	@GeneratedValue
 	@Column(name = "Member_ID")
 	private Long id;
 
-	@NonNull private String name;
-	
-	@NonNull private String desc;
-	
-	@OneToMany(mappedBy="member")
+	private String name;
+
+	private String desc;
+
+	@OneToMany(mappedBy = "member")
 	private List<Member_Moim> member_moim;
+
+	public Member(String name, String desc) {
+		this.name = name;
+		this.desc = desc;
+	}
 
 }
