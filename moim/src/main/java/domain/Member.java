@@ -30,6 +30,7 @@ public class Member {
 	private List<Member_Moim> member_moim;
 
 	public Member(String name, String desc) {
+		super();
 		this.name = name;
 		this.desc = desc;
 	}
