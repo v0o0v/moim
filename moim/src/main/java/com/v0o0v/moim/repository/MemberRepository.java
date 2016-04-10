@@ -7,7 +7,7 @@ import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 
 import com.v0o0v.moim.domain.Member;
 
-@RepositoryRestResource(collectionResourceRel = "member", path = "member")
+@RepositoryRestResource(collectionResourceRel = "members", path = "members")
 public interface MemberRepository extends JpaRepository<Member, Long> {
 
 	List<Member> findByName(String name);
