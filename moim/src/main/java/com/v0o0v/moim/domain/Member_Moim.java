@@ -11,10 +11,13 @@ import javax.persistence.ManyToOne;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import lombok.NonNull;
+import lombok.RequiredArgsConstructor;
 
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
+@RequiredArgsConstructor
 
 @Entity
 public class Member_Moim {
@@ -26,9 +29,11 @@ public class Member_Moim {
 
 	@ManyToOne
 	@JoinColumn(name = "Member_ID")
+	@NonNull
 	private Member member;
 
 	@ManyToOne
 	@JoinColumn(name = "Moim_ID")
+	@NonNull
 	private Moim moim;
 }

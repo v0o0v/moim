@@ -1,6 +1,5 @@
 package com.v0o0v.moim.domain;
 
-import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
