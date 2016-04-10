@@ -26,7 +26,7 @@ public class Application implements CommandLineRunner {
 	public void run(String... args) throws Exception {
 		// save a couple of customers
 
-		for (int i = 1; i < 5; i++) {
+		for (int i = 1; i <= 10; i++) {
 			repository.save(new Member("Member" + i, "Description_" + i));
 		}
 
