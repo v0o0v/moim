@@ -3,8 +3,10 @@ package com.v0o0v.moim.domain;
 import java.util.Date;
 import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
@@ -34,7 +36,7 @@ public class Moim {
 	@NonNull
 	private Date birthday;
 
-	@OneToMany(mappedBy = "moim")
+	@OneToMany(mappedBy = "moim", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
 	private List<Member_Moim> member_moim;
 
 }

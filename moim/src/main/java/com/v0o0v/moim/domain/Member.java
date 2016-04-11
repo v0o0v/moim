@@ -35,7 +35,7 @@ public class Member {
 	@NonNull
 	private String desc;
 
-	@OneToMany(mappedBy = "member", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+	@OneToMany(mappedBy = "member", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
 	private List<Member_Moim> member_moim;
 
 }
