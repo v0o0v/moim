@@ -15,6 +15,7 @@
 ##사용 기반 기술
 - Spring Framework
 - Spring boot
+- Spring Data REST
 - JPA
 - Vaadin
 
