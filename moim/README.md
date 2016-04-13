@@ -1,4 +1,4 @@
-# moim
+# Moim
 - Demo: http://default-environment.46vpqtvh3w.ap-northeast-2.elasticbeanstalk.com/
 
 
