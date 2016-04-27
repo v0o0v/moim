@@ -1,8 +1,6 @@
 package com.v0o0v.moim.domain;
 
-import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
@@ -24,7 +22,7 @@ public class Member_Moim {
 
 	@Id
 	@GeneratedValue
-	@Column(name = "Member_Moim_ID")
+	// @Column(name = "Member_Moim_ID")
 	private Long id;
 
 	@ManyToOne

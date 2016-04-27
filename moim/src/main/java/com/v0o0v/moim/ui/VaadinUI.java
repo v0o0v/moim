@@ -55,7 +55,7 @@ public class VaadinUI extends UI {
 		mainLayout.setSpacing(true);
 
 		grid.setHeight(300, Unit.PIXELS);
-		grid.setColumns("id", "name", "desc");
+		grid.setColumns("id", "name", "description");
 
 		filter.setInputPrompt("Filter by last name");
 

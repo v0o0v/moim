@@ -8,7 +8,6 @@ import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 
 import com.v0o0v.moim.domain.Member;
 
-
 @RepositoryRestResource(collectionResourceRel = "members", path = "members")
 public interface MemberRepository extends JpaRepository<Member, Long> {
 
@@ -16,5 +15,5 @@ public interface MemberRepository extends JpaRepository<Member, Long> {
 
 	List<Member> findByNameStartsWithIgnoreCase(String name);
 
-	List<Member> findByNameAndDesc(String name, String desc);
+	List<Member> findByNameAndDescription(String name, String description);
 }

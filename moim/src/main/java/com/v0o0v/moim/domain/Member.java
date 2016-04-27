@@ -26,16 +26,17 @@ public class Member {
 
 	@Id
 	@GeneratedValue
-	@Column(name = "Member_ID")
+	// @Column(name = "Member_ID")
 	private Long id;
 
 	@NonNull
 	private String name;
 
 	@NonNull
-	private String desc;
+	private String description;
 
-	@OneToMany(mappedBy = "member", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
-	private List<Member_Moim> member_moim;
+	 @Column(name = "member_moim")
+	 @OneToMany(mappedBy = "member", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+	 private List<Member_Moim> member_moim;
 
 }

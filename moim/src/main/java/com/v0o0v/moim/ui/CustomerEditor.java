@@ -16,13 +16,11 @@ import com.vaadin.ui.VerticalLayout;
 import com.vaadin.ui.themes.ValoTheme;
 
 /**
- * A simple example to introduce building forms. As your real application is
- * probably much more complicated than this example, you could re-use this form in
- * multiple places. This example component is only used in VaadinUI.
+ * A simple example to introduce building forms. As your real application is probably much more complicated than this
+ * example, you could re-use this form in multiple places. This example component is only used in VaadinUI.
  * <p>
- * In a real world application you'll most likely using a common super class for all your
- * forms - less code, better UX. See e.g. AbstractForm in Virin
- * (https://vaadin.com/addon/viritin).
+ * In a real world application you'll most likely using a common super class for all your forms - less code, better UX.
+ * See e.g. AbstractForm in Virin (https://vaadin.com/addon/viritin).
  */
 @SpringComponent
 @UIScope
@@ -76,8 +74,7 @@ public class CustomerEditor extends VerticalLayout {
 		if (persisted) {
 			// Find fresh entity for editing
 			customer = repository.findOne(c.getId());
-		}
-		else {
+		} else {
 			customer = c;
 		}
 		cancel.setVisible(persisted);

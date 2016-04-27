@@ -17,17 +17,17 @@ import lombok.NoArgsConstructor;
 import lombok.NonNull;
 import lombok.RequiredArgsConstructor;
 
-@Entity
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 @RequiredArgsConstructor
 
+@Entity
 public class Moim {
 
 	@Id
 	@GeneratedValue
-	@Column(name = "Moim_ID")
+	// @Column(name = "Moim_ID")
 	private Long id;
 
 	@NonNull
@@ -37,6 +37,7 @@ public class Moim {
 	private Date birthday;
 
 	@OneToMany(mappedBy = "moim", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+	@Column(name = "member_moim")
 	private List<Member_Moim> member_moim;
 
 }
